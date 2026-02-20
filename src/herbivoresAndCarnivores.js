@@ -14,9 +14,7 @@ class Animal {
     if (animal.health <= 0) {
       animal.health = 0;
 
-      const removedIndex = Animal.alive.indexOf(animal);
-
-      Animal.alive.splice(removedIndex, 1);
+      Animal.alive = Animal.alive.filter((a) => a.health > 0);
     }
   }
 }
